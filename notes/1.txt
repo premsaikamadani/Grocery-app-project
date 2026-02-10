@@ -1,0 +1,98 @@
+Django - Complete Web Application - MVT - Model , View, Template
+
+Frontend - HTML, CSS, Javascript, Bootstrap, React Js
+
+Backend - Python, Django Rest Framework, Database
+
+Django Rest Framework (DRF)
+
+HTTP (Hyper Text Transfer Protocol) - Used to transfer information from frontend and backend
+
+HTTP Method - CRUD Operations
+
+POST - Creation
+
+PUT - Updation
+
+GET - Reading
+
+PATCH - Partial Updation
+
+DELETE - Deletion
+
+
+Request & Response - Headers & Body
+
+Headers - Configuration
+
+Body - Actual information of user. (Optional - POST / PUT / PATCH)
+
+HTTP Status Codes
+
+200
+201
+204
+
+400
+401
+404
+
+500
+
+
+CREATION:
+POST
+http://127.0.0.1:8000/api/products
+
+UPDATION:
+PUT
+
+http://127.0.0.1:8000/api/products/productId
+
+DELETE:
+DELETE
+http://127.0.0.1:8000/api/products/productId
+
+READ:
+GET:
+http://127.0.0.1:8000/api/products
+
+http://127.0.0.1:8000/api/products/productId
+
+UPDATION:
+PATCH
+http://127.0.0.1:8000/api/products/productId
+
+
+
+
+Installation
+
+pip install djangorestframework
+
+settings.py
+
+INSTALLED_APPS = [
+'rest_framework'
+
+]
+
+
+
+Serializer: Converting Model instances into JSON format.
+
+De Serializer: Converting JSON format into Model instances to store in database.
+
+Validation: Validating incoming data.
+
+
+Syntax for creating serializer:
+
+from rest_framework import serializers
+
+class ProductSerializer(serializers.ModelSerializer):
+class Meta:
+model = Product
+fields = ' all '
+
+urls.py -> views.py -> serializers.py -> models.py -> database
